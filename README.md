@@ -1,15 +1,31 @@
-# macOS GPU Monitor
+# D700
 
-Simple C-based system monitor for macOS.
+Lightweight macOS system monitor written in C.
 
-Features:
-- GPU information
+Designed for monitoring AMD GPU-based Mac systems such as the 2013 Mac Pro with FirePro D700 GPUs.
+
+FEATURES
+- GPU information detection
 - GPU activity monitoring
-- CPU usage display
-- Memory usage display
-- Live refresh updates
+- CPU usage monitoring
+- Memory statistics
+- Live terminal refresh updates
 
-## Compile
+REQUIREMENTS
+- macOS
+- Clang compiler
+- Administrator privileges for GPU power monitoring
 
-```bash
-clang monitor.c -o monitor
+COMPILE
+
+clang D700.c -o D700
+
+RUN
+
+sudo ./D700
+
+NOTES
+- GPU monitoring uses macOS powermetrics
+- sudo is required for GPU activity access
+- Older Intel Mac systems may expose limited GPU telemetry
+- Press CTRL + C to stop the monitor
